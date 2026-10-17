@@ -1,0 +1,1 @@
+<article><a href="{{ it.url }}">{% if it.cover %}<img src="{{ it.cover | img }}" alt="{{ it.title | escape }}" loading="lazy">{% endif %}<h3>{{ it.title | escape }}</h3></a>{% if it.summary %}<p>{{ it.summary | escape }}</p>{% endif %}</article>

@@ -1,0 +1,4 @@
+<!doctype html>
+<html lang="{{ lang }}"><head>{% include 'yz/seo-head' %}<link rel="stylesheet" href="{{ 'site.css' | asset_url }}"></head>
+<body><header class="site-header"><a class="brand" href="{{ home_url }}">{{ site.name | escape }}</a><nav aria-label="{{ '导航' | t: 'Navigation' }}">{% for entry in columns %}<a href="{{ entry[1].url }}">{{ entry[1].name | escape }}</a>{% endfor %}<a href="{{ contact_url }}">{{ '联系' | t: 'Contact' }}</a>{% for l in langs %}{% unless l.code == lang %}<a href="{{ l.url }}" lang="{{ l.code }}">{{ l.name }}</a>{% endunless %}{% endfor %}</nav></header>
+<main>{% block content %}{% endblock %}</main><footer>{{ site.name | escape }}{% if site.email %} · <a href="mailto:{{ site.email | escape }}">{{ site.email | escape }}</a>{% endif %}</footer></body></html>

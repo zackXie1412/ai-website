@@ -1,0 +1,5 @@
+---
+title: 联系我们
+title.en: Contact
+---
+{% layout 'base' %}{% block content %}<section class="narrow"><p class="eyebrow">{{ '联系我们' | t: 'Contact' }}</p><h1>{{ '期待与您合作' | t: 'Get in touch' }}</h1><div class="contact-rows">{% if site.phone %}<div><span>{{ '电话' | t: 'Phone' }}</span><span><a href="tel:{{ site.phone | escape }}">{{ site.phone | escape }}</a></span></div>{% endif %}{% if site.email %}<div><span>{{ '邮箱' | t: 'Email' }}</span><span><a href="mailto:{{ site.email | escape }}">{{ site.email | escape }}</a></span></div>{% endif %}{% if site.whatsapp %}<div><span>WhatsApp</span><span>{{ site.whatsapp | escape }}</span></div>{% endif %}{% if site.wechat %}<div><span>{{ '微信' | t: 'WeChat' }}</span><span>{{ site.wechat | escape }}</span></div>{% endif %}{% if site.address %}<div><span>{{ '地址' | t: 'Address' }}</span><span>{{ site.address | escape }}</span></div>{% endif %}</div><p class="notice">{{ '本地表单演示，未接入真实提交。' | t: 'Local form preview. Submissions are not connected.' }}</p>{% include 'yz/inquiry-form' %}</section>{% endblock %}

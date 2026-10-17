@@ -1,0 +1,20 @@
+# OS and editor files
+.DS_Store
+.idea/
+.vscode/
+.workbuddy/
+
+# Dependencies and local runtime output
+node_modules/
+.yz/
+dist/
+
+# Local secrets and environment overrides
+.env
+.env.*
+!.env.example
+
+# Temporary files
+*.log
+*.tmp
+*.swp

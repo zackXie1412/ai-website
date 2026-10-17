@@ -1,0 +1,5 @@
+---
+title: 联系我们
+title.en: Contact
+---
+{% layout 'base' %}{% block content %}<section class="narrow"><h1>{{ '联系我们' | t: 'Contact us' }}</h1>{% if site.address %}<p>{{ site.address | escape }}</p>{% endif %}{% if site.phone %}<p>{{ site.phone | escape }}</p>{% endif %}<p class="notice">{{ '本地表单演示，未接入真实提交。' | t: 'Local form preview. Submissions are not connected.' }}</p>{% include 'yz/inquiry-form' %}</section>{% endblock %}
